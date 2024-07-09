@@ -19,6 +19,7 @@
 		<module>eureka-server</module>
 		<module>gateway-service</module>
 		<module>lavado-service</module>
+		<module>clientes</module>
 	</modules>
 	<url/>
 	<licenses>
