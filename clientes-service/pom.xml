@@ -8,7 +8,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.jzapata.clientes</groupId>
-	<artifactId>clientes</artifactId>
+	<artifactId>clientes-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>clientes</name>
 	<description>Demo project for Spring Boot</description>
