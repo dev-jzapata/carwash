@@ -20,6 +20,7 @@
 		<module>gateway-service</module>
 		<module>lavado-service</module>
 		<module>clientes-service</module>
+		<module>albaran-service</module>
 	</modules>
 	<url/>
 	<licenses>
