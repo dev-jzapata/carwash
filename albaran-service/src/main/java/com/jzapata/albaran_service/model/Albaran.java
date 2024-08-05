@@ -1,10 +1,7 @@
 package com.jzapata.albaran_service.model;
 
 import com.jzapata.albaran_service.dto.LavadoDto;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,7 +21,9 @@ public class Albaran {
 
     private LocalDate fecha;
 
-    private List<LavadoDto> lavados;
+    private List<Long> lavados;
+
+    private Long cliente;
 
 
 

@@ -1,17 +1,14 @@
 package com.jzapata.albaran_service.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 public class LavadoDto {
 
     private Long id;
     private String nombre;
+    private boolean eliminado;
 
 }

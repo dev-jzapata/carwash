@@ -1,5 +1,6 @@
 package com.jzapata.albaran_service.service;
 
+import com.jzapata.albaran_service.dto.LavadoDto;
 import com.jzapata.albaran_service.model.Albaran;
 
 import java.util.List;

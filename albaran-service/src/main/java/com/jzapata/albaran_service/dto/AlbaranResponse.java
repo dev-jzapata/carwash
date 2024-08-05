@@ -11,12 +11,12 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class AlbaranResponse {
-
     private Long id;
-
+    private List<LavadoDto> allLavados;
+    private List<ClienteDto> allClientes;
     private LocalDate fecha;
-
-    private List<LavadoDto> lavados;
-
+    private Long cliente;
+    private List<Long> lavados;
     private String mensaje;
+
 }

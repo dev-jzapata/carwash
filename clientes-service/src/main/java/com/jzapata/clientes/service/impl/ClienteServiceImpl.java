@@ -1,7 +1,8 @@
-package com.jzapata.clientes.service;
+package com.jzapata.clientes.service.impl;
 
 import com.jzapata.clientes.entity.Cliente;
 import com.jzapata.clientes.repository.ClienteRepository;
+import com.jzapata.clientes.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,7 +11,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class ClienteServiceImpl implements ClienteService{
+public class ClienteServiceImpl implements ClienteService {
 
     @Autowired
     private ClienteRepository clienteRepository;

@@ -13,8 +13,14 @@ import java.util.List;
 @Builder
 public class AlbaranRequest {
 
+    private Long id;
+
     private LocalDate fecha;
 
-    private List<LavadoDto> lavados;
+    private List<Long> lavados;
+
+    private String mensaje;
+
+    private ClienteDto clienteDto;
 
 }
