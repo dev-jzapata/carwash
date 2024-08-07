@@ -1,0 +1,22 @@
+package com.jzapata.gateway_service.util;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+
+public class ApiClient {
+    public static void main(String[] args) {
+        String url = "http://localhost:8083/api/lavados";
+        RestTemplate restTemplate = new RestTemplate();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setBearerAuth("eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJpTV96ZEFBSHo4bldrd3JIc1k5VmRYcEJ2bXRQWW5pbk5SeGZ3aGMtano0In0.eyJleHAiOjE3MjMwMjY0MDcsImlhdCI6MTcyMzAyNjEwNywianRpIjoiNjk2NDIxZDAtYTdhMC00YmJiLWJhMWItNDBiNDQ4ZWY5ODc1IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgxL3JlYWxtcy9zcHJpbmctYm9vdC1yZWFsbS1kZXYiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiN2I3NmRkNjgtYjgzOC00YjZhLTk3YTUtZTY4ZDJlM2U2MGY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic3ByaW5nLWNsaWVudC1hcGktcmVzdCIsInNpZCI6ImFlMDFkOTQxLTQwOGItNGRmZC1hMmFkLTVmM2ZjOTNlNjI5YyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXNwcmluZy1ib290LXJlYWxtLWRldiIsImFkbWluIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJzcHJpbmctY2xpZW50LWFwaS1yZXN0Ijp7InJvbGVzIjpbImFkbWluX2NsaWVudF9yb2xlIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6InphcGEgc2FuY2hleiIsInByZWZlcnJlZF91c2VybmFtZSI6InphcGEiLCJnaXZlbl9uYW1lIjoiemFwYSIsImZhbWlseV9uYW1lIjoic2FuY2hleiIsImVtYWlsIjoiemFwYUBlbWFpbC5jb20ifQ.EoPsn5m8BatspvOJes3HBX7I50y6yehksLyLXtk5PyUqUFo5uxP2cTNJ9NQMp-7-h6XgxYAp0-Fyi7kYg0mcTPCD_z88F3P-zc-in1HQMJEelfPtM58yNTneKHVkPBd2BdHmdRJ1IPH8_mYb0uzDBG5_FuJ3UoS003Khr2nrkkq7d13LENC6Mfve5eAiFvD412h7DODQm96aZl8xh-v-h-JeXV5sPkBwttz5U1Gk7hTadOu82ZRL9myV0AmartdDUJkfxU301-QSYVzCOheuZQbVDgiso56UfrtpeQG3jiaKkZZ4c51JaTrbxHh2wln2LFFN42bIfcTFUX3Xh9MbiA"); // Reemplaza con tu token JWT
+
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+
+        System.out.println(response.getBody());
+    }
+}
