@@ -21,7 +21,7 @@ public class LavadoController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping
-    //@PreAuthorize("hasRole('admin_client_role')")
+    @PreAuthorize("hasRole('admin_client_role')")
     public ResponseEntity<List<Lavado>> getAllLavados(){
         return ResponseEntity.ok().body(lavadoService.getAllLavados());
     }

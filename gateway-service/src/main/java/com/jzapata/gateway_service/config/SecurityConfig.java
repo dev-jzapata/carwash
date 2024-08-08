@@ -28,7 +28,7 @@ public class SecurityConfig{
         return http
                 .csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .authorizeExchange(exchanges -> exchanges
-                        .pathMatchers("/api/lavados").permitAll() // Allow access without authentication
+                        //.pathMatchers("/api/lavados").permitAll() // Allow access without authentication
                         .anyExchange().authenticated()
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2
@@ -40,6 +40,6 @@ public class SecurityConfig{
 
     @Bean
     public ReactiveJwtDecoder jwtDecoder() {
-        return NimbusReactiveJwtDecoder.withJwkSetUri("http://localhost:8081/realms/spring-boot-realm-dev/protocol/openid-connect/certs").build();
+        return NimbusReactiveJwtDecoder.withJwkSetUri("http://localhost:8081/realms/spring-boot-realm-prod/protocol/openid-connect/certs").build();
     }
 }
